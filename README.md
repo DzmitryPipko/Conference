@@ -9,3 +9,5 @@ Using technologies:
         1. locomotive
         2. hogan-express
         3. Q
+        4. mongoose
+        5. password
