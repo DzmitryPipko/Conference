@@ -14,3 +14,8 @@ results
 
 npm-debug.log
 node_modules
+
+# Visual Studio 2012 project files
+*.njsproj
+*.suo
+*.sln
