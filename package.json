@@ -10,7 +10,15 @@
     "connect-powered-by": "0.1.x",
     "ejs": "0.8.x",
     "hogan-express": "*",
-    "q": "*"
+    "q": "*",
+    "mongoose" : "latest",
+    "passport" : "*",
+    "passport-local" : "*",
+    "passport-facebook": "*",
+    "passport-twitter" : "*",
+    "passport-google-oauth": "*",
+    "locomotive-mongoose" : "*",
+     "bcrypt-nodejs" : "latest"
   },
   "scripts": {
     "start": "node server.js"

@@ -6,4 +6,6 @@ module.exports = function() {
   if (this.version !== require('locomotive').version) {
     console.warn(util.format('version mismatch between local (%s) and global (%s) Locomotive module', require('locomotive').version, this.version));
   }
+
+  this.datastore(require('locomotive-mongoose'));
 }

@@ -25,4 +25,7 @@ module.exports = function() {
   // example, a browser is sent an HTML response, while an API client is sent a
   // JSON or XML response.
   /* this.format('xml', { engine: 'xmlb' }); */
+  this.set('partials', {
+      	"loginBar" : "partials/loginBar",
+      });
 }

@@ -13,16 +13,21 @@ var locomotive = require('locomotive')
   };
 
 
-var homeController = new Controller();
+var loginController = new Controller();
 
-homeController.main = function() {
+loginController.login = function() {
+
+    var dd = 2 ;
   this.title = 'Locomotive';
   this.render();
 }
 
+loginController.signup = function (){
 
+    this.render('singup');
 
+}
 
-ParentController.parentOf(homeController,ActionsRequiringLogin, ActionsRequiringNotLoggedIn);
+ParentController.parentOf(loginController,ActionsRequiringLogin, ActionsRequiringNotLoggedIn);
 
-module.exports = homeController;
+module.exports = loginController;

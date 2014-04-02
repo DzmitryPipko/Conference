@@ -1,5 +1,11 @@
 var express = require('express')
-  , poweredBy = require('connect-powered-by');
+  , poweredBy = require('connect-powered-by'),
+  passport = require('passport');
+var configDB = require('../database.js');
+var mongoose = require('mongoose');
+
+// configuration ===============================================================
+mongoose.connect(configDB.url); // connect to our database
 
 module.exports = function() {
   // Use middleware.  Standard [Connect](http://www.senchalabs.org/connect/)
@@ -14,6 +20,13 @@ module.exports = function() {
   this.use(express.static(__dirname + '/../../public'));
   this.use(express.bodyParser());
   this.use(express.methodOverride());
+  this.use( express.cookieParser() );
+  this.use(express.session({ secret: 'ilovescotchscotchyscotchscotch' }));
+  this.use(passport.initialize());
+  this.use(passport.session());
   this.use(this.router);
   this.use(express.errorHandler());
 }
+
+// pass passport for configuration
+require('../passport.js')(passport);
