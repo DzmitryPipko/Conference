@@ -10,7 +10,9 @@
     "connect-powered-by": "0.1.x",
     "ejs": "0.8.x",
     "hogan-express": "*",
-    "q": "*"
+    "q": "*",
+	"mongoose": "*",
+	"locomotive-mongoose": "*"
   },
   "scripts": {
     "start": "node server.js"
