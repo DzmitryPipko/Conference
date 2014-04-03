@@ -18,15 +18,16 @@ var homeController = new Controller();
 
 homeController.main = function() {
   this.title = 'Locomotive';
-
-	var photo = photoModel({ name: "TestPhoto", url: "TestUrl" });
-    photo.save(function(err, testPhoto){
-	console.log("save------<");
-	if(err)
-		console.log(err);
-	if(testPhoto)
-		console.log(testPhoto);
-    });
+	
+	var ddd = this.__("Hi");
+//	var photo = photoModel({ name: "TestPhoto", url: "TestUrl" });
+//    photo.save(function(err, testPhoto){
+//	console.log("save------<");
+//	if(err)
+//		console.log(err);
+//	if(testPhoto)
+//		console.log(testPhoto);
+//    });
 
 
   this.render();

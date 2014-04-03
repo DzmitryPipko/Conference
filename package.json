@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "locomotive": "0.4.x",
+    "locomotive": "0.4.x",    
     "bootable": "0.2.x",
     "bootable-environment": "0.2.x",
     "express": "3.x.x",
@@ -11,8 +11,9 @@
     "ejs": "0.8.x",
     "hogan-express": "*",
     "q": "*",
-	"mongoose": "*",
-	"locomotive-mongoose": "*"
+    "mongoose": "*",
+    "locomotive-mongoose": "*",
+	"i18n-2": "^0.4.6"
   },
   "scripts": {
     "start": "node server.js"
