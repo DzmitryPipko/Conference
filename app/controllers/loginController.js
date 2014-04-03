@@ -17,16 +17,14 @@ var loginController = new Controller();
 
 loginController.login = function() {
 
-    var dd = 2 ;
-  this.title = 'Locomotive';
-  this.render();
-}
+    this.render();
+};
 
-loginController.signup = function (){
+loginController.signup = function() {
 
     this.render('singup');
 
-}
+};
 
 ParentController.parentOf(loginController,ActionsRequiringLogin, ActionsRequiringNotLoggedIn);
 

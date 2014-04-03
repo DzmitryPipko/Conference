@@ -5,8 +5,7 @@
  *
  */
 
-var locomotive = require('locomotive')
-,	ParentController = locomotive.Controller
+var locomotive = require('locomotive'), ParentController = locomotive.Controller;
 
 //Begin Parent Controller
 	ParentController.parentOf = function(AppController, requireLoggedIn, requireNotLoggedIn){
