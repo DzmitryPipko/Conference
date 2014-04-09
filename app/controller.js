@@ -16,9 +16,12 @@ var locomotive = require('locomotive'), ParentController = locomotive.Controller
 
 	};
 
-	ParentController.beforeAll = function(next){
+	ParentController.beforeAll = function(next) {
 
-		next();
+	    if(this.__id !== 'login')
+            isLoggedIn(this.__req, this.__res, next);
+		
+        next();
 	};
 
 	ParentController.afterAll = function(next){
@@ -34,6 +37,20 @@ var locomotive = require('locomotive'), ParentController = locomotive.Controller
 //        this.__res.header("Pragma", "no-cache");
 //        this.__res.header("Expires", 0);
     };
+
+
+    // route middleware to make sure a user is logged in
+    function isLoggedIn(req, res, next) {
+    
+    	// if user is authenticated in the session, carry on 
+        if (req.isAuthenticated())
+//    		return next();
+            return;
+    
+    	// if they aren't redirect them to the home page
+    	res.redirect('/');
+    }
+
 
 //End Controller
 module.exports = ParentController;

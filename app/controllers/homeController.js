@@ -32,6 +32,6 @@ homeController.main = function() {
 
   this.render();
 }
-ParentController.parentOf(homeController,ActionsRequiringLogin, ActionsRequiringNotLoggedIn);
+//ParentController.parentOf(homeController,ActionsRequiringLogin, ActionsRequiringNotLoggedIn);
 
 module.exports = homeController;

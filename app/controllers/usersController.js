@@ -30,6 +30,7 @@ usersController.create = function() {
 
 usersController.show = function() {
     var  self = this;
+    this.user = this.__req.user;
     self.render();
 }
 
